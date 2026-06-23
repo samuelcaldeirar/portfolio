@@ -165,12 +165,13 @@ function App() {
               Sobre Mim
             </h2>
             <p className="text-gray-400 leading-relaxed text-lg">
-              Sou um universitário da área de TI no 6º período, focado em criar soluções que unem código e criatividade. 
-              No frontend, gosto de construir interfaces funcionais e de alto impacto utilizando o ecossistema React.js.
+              Sou formado em Tecnologia da Informação, com uma paixão profunda por entender como os sistemas funcionam por baixo dos panos — seja construindo interfaces ou desconstruindo arquiteturas de software.
             </p>
             <p className="text-gray-400 leading-relaxed text-lg">
-              Além do desenvolvimento web, dedico meus estudos à automação com Python (incluindo integrações com LLMs locais) 
-              e à segurança defensiva (Blue Team). Também tenho um forte interesse nos bastidores dos jogos e ferramentas de modding.
+              Minha atuação é guiada pela versatilidade e pesquisa. No Front-end, crio experiências com React, tendo um interesse forte por acessibilidade de UI para diferentes faixas etárias. Nos bastidores, desenvolvo ferramentas de segurança defensiva (SecTools), exploro conceitos de Visão Computacional e integro inteligências artificiais locais (LLMs) via Python.
+            </p>
+            <p className="text-gray-400 leading-relaxed text-lg">
+              Além do ambiente corporativo e do foco em Blue Team, possuo vivência técnica com Game Dev e Modding, lidando com mecânicas de engines e modelagem 3D no Blender.
             </p>
           </div>
 
