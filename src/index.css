@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --cor-fundo: #0d1117;
+  --cor-primaria: #5eead4;
+}
+
+.theme-umbra {
+  --cor-fundo: #0a0105;
+  --cor-primaria: #00f0ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: #e2e8f0;
+  transition: background-color 0.5s ease;
+}
