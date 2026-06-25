@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 
+import { 
+  Atom, 
+  Palette, 
+  Accessibility, 
+  TerminalSquare, 
+  BrainCircuit, 
+  Scan, 
+  Radar, 
+  Wrench, 
+  ShieldCheck, 
+  Gamepad2, 
+  Settings, 
+  Box 
+} from 'lucide-react';
+
 function App() {
   const [tema, setTema] = useState('synthwave');
   const alternarTema = () => {
@@ -15,19 +30,19 @@ function App() {
       cards: [
         {
           nome: 'React.js',
-          icone: '⚛️',
+          icone: <Atom size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Construção de interfaces (SPAs), componentização, gerenciamento de estado e consumo de APIs.',
           tags: ['JavaScript', 'Hooks', 'Vite']
         },
         {
           nome: 'Tailwind CSS',
-          icone: '🎨',
+          icone: <Palette size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Estilização utilitária e ágil para criar designs modernos e adaptáveis a qualquer tela.',
           tags: ['CSS', 'Responsividade', 'UI']
         },
         {
           nome: 'Acessibilidade & UI',
-          icone: '👁️',
+          icone: <Accessibility size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Foco na estruturação de interfaces inclusivas e adaptadas para diferentes faixas etárias e necessidades visuais.',
           tags: ['Semântica', 'UX', 'Design Inclusivo']
         }
@@ -41,19 +56,19 @@ function App() {
       cards: [
         {
           nome: 'Python Scripts',
-          icone: '🐍',
+          icone: <TerminalSquare size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Criação de bots (como integradores para Discord), rotinas de automação e manipulação via linha de comando.',
           tags: ['Python', 'Discord.py', 'CLI']
         },
         {
           nome: 'Ollama & LLMs',
-          icone: '🧠',
+          icone: <BrainCircuit size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Integração e execução de modelos de linguagem (IA) locais para bots de terminal e ferramentas de assistência.',
           tags: ['IA Local', 'Ollama', 'Prompting']
         },
         {
           nome: 'Visão Computacional',
-          icone: '📷',
+          icone: <Scan size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Estudos e implementações focadas em processamento e análise de imagens por algoritmos.',
           tags: ['Computer Vision', 'Python', 'OpenCV']
         }
@@ -67,50 +82,24 @@ function App() {
       cards: [
         {
           nome: 'Monitoramento SIEM',
-          icone: '📡',
+          icone: <Radar size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Operação de soluções SIEM para agregação de logs, correlação de eventos em tempo real e criação de alertas de segurança.',
           tags: ['SIEM', 'Correlação', 'SOC']
         },
         {
           nome: 'Desenvolvimento SecTools',
-          icone: '🛠️',
+          icone: <Wrench size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Criação de ferramentas próprias e scripts em Python com viés defensivo para automatizar análises.',
           tags: ['SecDev', 'Python', 'Automação']
         },
         {
           nome: 'Fundamentos Blue Team',
-          icone: '🔐',
+          icone: <ShieldCheck size={28} className="text-[var(--cor-primaria)]" />,
           desc: 'Aplicação de metodologias de proteção, mitigação de riscos e respostas a incidentes teóricos.',
           tags: ['Defesa', 'Hardening', 'CyberSec']
         }
       ]
     },
-    {
-      id: '04',
-      tag: 'Game Dev',
-      titulo: 'Modding & Engines',
-      descricao: 'Compreensão da estrutura interna de jogos, conversão técnica de assets e estabilização de load orders.',
-      cards: [
-        {
-          nome: 'Engines 3D',
-          icone: '🎮',
-          desc: 'Estudo das mecânicas fundamentais, física e programação de lógica de jogos em ambientes 3D.',
-          tags: ['Unity', 'C#']
-        },
-        {
-          nome: 'Conversão de Assets',
-          icone: '⚙️',
-          desc: 'Otimização de texturas e modelos, manipulação rigorosa e exportação para injeção in-game.',
-          tags: ['BodySlide', 'Outfit Studio', 'Meshes']
-        },
-        {
-          nome: 'Modelagem 3D & Blender',
-          icone: '🧊',
-          desc: 'Criação, edição e otimização de malhas 3D (meshes), topologia e mapeamento UV para integração em engines.',
-          tags: ['Blender', '3D Modeling', 'Texturing']
-        }
-      ]
-    }
   ];
 
  return (
@@ -176,6 +165,7 @@ function App() {
           </div>
 
           <div className="flex-1 grid grid-cols-2 gap-4 w-full">
+            
             <div className="bg-white/5 border border-gray-800 rounded-xl p-6 text-center hover:border-[var(--cor-primaria)] hover:-translate-y-1 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-1">React.js</h3>
               <p className="text-sm text-[var(--cor-primaria)] font-medium transition-colors duration-500">Frontend</p>
@@ -186,15 +176,13 @@ function App() {
               <p className="text-sm text-[var(--cor-primaria)] font-medium transition-colors duration-500">Automação & IA</p>
             </div>
             
-            <div className="bg-white/5 border border-gray-800 rounded-xl p-6 text-center hover:border-[var(--cor-primaria)] hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-white mb-1">Blue Team</h3>
-              <p className="text-sm text-[var(--cor-primaria)] font-medium transition-colors duration-500">Cybersecurity</p>
+            <div className="col-span-2 flex justify-center">
+              <div className="w-[calc(50%-0.5rem)] bg-white/5 border border-gray-800 rounded-xl p-6 text-center hover:border-[var(--cor-primaria)] hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-2xl font-bold text-white mb-1">Blue Team</h3>
+                <p className="text-sm text-[var(--cor-primaria)] font-medium transition-colors duration-500">Cybersecurity</p>
+              </div>
             </div>
-            
-            <div className="bg-white/5 border border-gray-800 rounded-xl p-6 text-center hover:border-[var(--cor-primaria)] hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-white mb-1">Modding</h3>
-              <p className="text-sm text-[var(--cor-primaria)] font-medium transition-colors duration-500">Game Dev</p>
-            </div>
+
           </div>
         </div>
       </section>
